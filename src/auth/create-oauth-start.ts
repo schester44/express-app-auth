@@ -41,7 +41,7 @@ export default function createOAuthStart(
     );
 
     res.redirect(
-      // TODO: Putting :3000 here for dev purposes.. `acccount` value can be modified using optiosn in `appAuth`
+      // FIXME: This is wrong .. this would never load with X-Frame-Options=DENY on the Admin page
       // FIXME: This should be https://
       `http://${account}:3000/apps/oauth/authorize?${formattedQueryString}`
     );
